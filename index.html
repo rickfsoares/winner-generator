@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorteio</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
 </head>
+
 <body>
     <div id="container">
+        <div id="upload-section">
+            <h2>Importar planilha</h2>
+            <input type="file" id="upload" accept=".xlsx" />
+        </div>
 
-        <h2 class="sheet-import-settings">Importar planilha</h2>
-        <input class="sheet-import-settings" type="file" id="upload" accept=".xlsx">
+        <div id="history" class="hidden">
+            <h3>Nomes já sorteados:</h3>
+            <ul id="winners-list"></ul>
+        </div>
 
-        <h1 class="visible-content">Sorteado</h1>
+        <button id="draw-button" class="hidden">🎉 Sortear Participante</button>
 
-        <div id="choosed-name" class="visible-content">Quem será o felizardo?</div>
-
-        <button id="choose" class="visible-content">Sortear</button>
+        <!-- Modal -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h2>🎊 Sorteado:</h2>
+                <p id="winner-name">Fulano</p>
+                <button id="new-draw-button">Novo Sorteio</button>
+            </div>
+        </div>
     </div>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
