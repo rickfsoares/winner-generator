@@ -19,7 +19,7 @@ Um sorteador de nomes simples, feito em JavaScript, que lê uma planilha `.xlsx`
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repo.git
+   git clone https://github.com/rickfsoares/winner-generator.git
    ```
 2. Abra o arquivo `index.html` no seu navegador.
 3. Importe um arquivo `.xlsx` com uma coluna chamada `Nome` ou `Nome Completo`.
